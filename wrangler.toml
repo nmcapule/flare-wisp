@@ -1,0 +1,23 @@
+
+account_id = "920ae3df2fe96c94928358259f7fca36"
+name = "flare-wisp-local"
+route = ""
+type = "webpack"
+vars = {ENVIRONMENT = "local"}
+webpack_config = "node_modules/flareact/webpack"
+workers_dev = true
+zone_id = "45f325f8c04f9171d85e75150107cdf8"
+
+[site]
+bucket = "out"
+entry-point = "./"
+
+[env.development]
+name = "flare-wisp-dev"
+route = "dev.hash.ph/*"
+vars = {ENVIRONMENT = "dev"}
+
+[env.production]
+name = "flare-wisp"
+route = "hash.ph/*"
+vars = {ENVIRONMENT = "prod"}
